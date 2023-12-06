@@ -54,6 +54,8 @@ def calculate():
         return redirect(url_for(result, score=avg_marks))"""
 
 
+## this is the entry point of the whole program
+## flask related program is difined before main program to get loaded early, so it can't be included in the main body.
 
 if __name__=="__main__": # (caling app for run and telling to this as starting point)
     app.run() # debug =  true ---> will restart the total app
