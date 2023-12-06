@@ -56,4 +56,4 @@ def calculate():
 
 
 if __name__=="__main__": # (caling app for run and telling to this as starting point)
-    app.run() # debug =  true ---> will restart the total app
+    app.run(debug=True) # debug =  true ---> will restart the total app
