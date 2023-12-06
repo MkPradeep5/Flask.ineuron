@@ -1,5 +1,5 @@
 ## create a simple flask application
-# Flask is the used to build web pages which are less 
+# Flask is the used to build web pages which is light weight
 
 
 from flask import Flask,redirect,url_for,render_template,request
@@ -57,5 +57,5 @@ def calculate():
 ## this is the entry point of the whole program
 ## flask related program is defined before main program to get loaded early, so it can't be included in the main body.
 
-if __name__=="__main__": # (calling app for run and telling to this as starting point)
+if __name__=="__main__": # (calling app for run and telling this as starting point)
     app.run() # debug =  true ---> will restart the total app
