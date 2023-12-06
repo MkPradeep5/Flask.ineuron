@@ -3,14 +3,14 @@
 
 
 from flask import Flask,redirect,url_for,render_template,request
-# app.route is the decorater from the arugument it will direct the route or ways for the respective / back slash webpages.
+# app.route is the decorator from the arugument it will direct the route or ways for the respective / back slash webpages.
 # redirect, url_for are modules from flask package will get the total webpage 
 # render_template - will also redirect to webpage but that webpage should be in the local folder with name templates (case sentive) 
 # - otherwhy not found error pops up
 
 app = Flask(__name__)
 
-@app.route("/")  # route will assign differents urls
+@app.route("/")  # route will assign different urls
 def home():
     return "Hello world!"
 
@@ -36,7 +36,7 @@ def calculate():
     if request.method == "GET": # request is import to state which method is requested whether push or get
         return render_template("calculate.html")
     else: 
-        maths = float(request.form["maths"]) # request from gives the varaible values given by user 
+        maths = float(request.form["maths"]) # request from gives the variable values given by user 
         science = float(request.form["science"])
         history = float(request.form["history"])
     
@@ -55,7 +55,7 @@ def calculate():
 
 
 ## this is the entry point of the whole program
-## flask related program is difined before main program to get loaded early, so it can't be included in the main body.
+## flask related program is defined before main program to get loaded early, so it can't be included in the main body.
 
-if __name__=="__main__": # (caling app for run and telling to this as starting point)
+if __name__=="__main__": # (calling app for run and telling to this as starting point)
     app.run() # debug =  true ---> will restart the total app
